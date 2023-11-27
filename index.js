@@ -34,7 +34,7 @@ window.onload = () => {
             const setURL = () => {
                 let text = rawToText(cfg, Calc.getState());
                 text = encodeURIComponent(text);
-                history.pushState({ data: 'data' }, "", \`?d=\${text}\`);
+                history.pushState({ data: 'data' }, "", `?d=\${text}`);
             }
             
             let saveFileContainer = clonableContainer.cloneNode(true);
@@ -43,7 +43,7 @@ window.onload = () => {
             saveFileButton.classList.add("dcg-btn-primary");
             saveFileButton.innerHTML = "Save File";
             saveFileButton.onclick = () => {
-                download(\`graph.json\`, JSON.stringify(Calc.getState(), null, 4));
+                download(`graph.json`, JSON.stringify(Calc.getState(), null, 4));
                 setURL();
             }
             saveContainer.appendChild(saveFileContainer);
