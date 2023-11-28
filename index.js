@@ -60,3 +60,4 @@ const waitForCalc = () => {
         saveContainer.appendChild(setURLContainer);
     }
 }
+waitForCalc();
