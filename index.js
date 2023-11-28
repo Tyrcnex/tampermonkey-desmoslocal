@@ -33,7 +33,7 @@ const waitForCalc = () => {
         const setURL = () => {
             let text = rawToText(cfg, Calc.getState());
             text = encodeURIComponent(text);
-            history.pushState({ data: 'data' }, "", `?d=\${text}`);
+            history.pushState({ data: 'data' }, "", `?d=${text}`);
         }
         
         let saveFileContainer = clonableContainer.cloneNode(true);
